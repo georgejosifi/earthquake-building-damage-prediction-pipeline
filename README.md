@@ -1,3 +1,6 @@
+## Description
+A flexible pipeline to predict the level of damage to buildings caused by the 2015 earthquake in Nepal based on building location and construction features.
+
 ## Directory structure
 
 ```
