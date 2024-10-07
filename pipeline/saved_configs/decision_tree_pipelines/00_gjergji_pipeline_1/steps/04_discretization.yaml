@@ -1,0 +1,14 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: discretize_age
+    features:
+      - age
+      - area_percentage
+    transformer_name: Preprocessing
+    transformer_algorithm: KBinsDiscretizer
+    algorithm_parameters:
+      n_bins: 3
+      encode: ordinal
+      strategy: uniform

@@ -1,0 +1,5 @@
+sampler_name: OversamplingAlgorithm
+sampler_algorithm: RandomOverSampler
+algorithm_parameters:
+    random_state: 25
+    

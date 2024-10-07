@@ -1,0 +1,6 @@
+classification_algorithm: DecisionTreeClassifier
+algorithm_parameters:
+    criterion: entropy
+    
+ 
+  

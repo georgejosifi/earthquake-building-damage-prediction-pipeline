@@ -1,0 +1,13 @@
+validation: True
+imbalanced_learn: False
+
+data_load_dir: "data"
+results_dir: "results"
+
+train_values_file: "train_values.csv"
+train_labels_file: "train_labels.csv"
+test_values_file: "test_values.csv"
+output_file: "predictions.csv"
+
+steps_dir: "config/steps"
+imbalanced_learn_dir: "config/imbalanced-learn.yaml"

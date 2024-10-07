@@ -1,0 +1,13 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: age_imputation
+    features:
+     - age
+    transformer_name: Imputation
+    transformer_algorithm: SimpleImputer
+    algorithm_parameters:
+      missing_values:  995
+      strategy: mean
+  

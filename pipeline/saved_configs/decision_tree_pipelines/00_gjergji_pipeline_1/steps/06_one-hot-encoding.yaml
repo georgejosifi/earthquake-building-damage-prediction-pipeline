@@ -1,0 +1,17 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: categorical_features_one_hot_encoding
+    features:
+      - land_surface_condition
+      - legal_ownership_status
+      - plan_configuration
+      - .*_type
+      - position
+      - age
+      - area_percentage
+    transformer_name: Preprocessing
+    transformer_algorithm: OneHotEncoder
+    algorithm_parameters:
+      sparse_output: False

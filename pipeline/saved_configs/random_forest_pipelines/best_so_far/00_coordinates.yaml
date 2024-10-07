@@ -1,0 +1,9 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: add_coordinates
+    transformer_name: Misc
+    transformer_algorithm: AddMunicipalityCoordinates
+    features:
+      - "geo_level_1_id"

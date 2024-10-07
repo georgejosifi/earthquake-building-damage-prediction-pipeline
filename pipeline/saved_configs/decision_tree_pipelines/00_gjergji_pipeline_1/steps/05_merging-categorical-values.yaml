@@ -1,0 +1,15 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: merge_infrequent_categories
+    features:
+      - land_surface_condition
+      - legal_ownership_status
+      - plan_configuration
+      - position
+      - foundation_type
+    transformer_name: InfrequentCatMerger
+    transformer_algorithm: InfrequentCategoryMerger
+    algorithm_parameters:
+        threshhold: 0.05

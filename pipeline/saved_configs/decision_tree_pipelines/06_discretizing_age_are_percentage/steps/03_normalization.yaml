@@ -1,0 +1,13 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: numerical_features_normalization
+    features: 
+      - count_floors_pre_eq
+      - age
+      - area_percentage
+      - height_percentage
+      - count_families
+    transformer_name: Preprocessing
+    transformer_algorithm: StandardScaler

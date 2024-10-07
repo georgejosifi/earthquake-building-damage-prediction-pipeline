@@ -1,0 +1,13 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: pca_floors_height
+    new_column_names: ["pca_height_floors"]
+    features: 
+      - count_floors_pre_eq
+      - height_percentage
+    transformer_name: DimensionalityReduction
+    transformer_algorithm: PCA
+    algorithm_parameters: 
+      n_components: 1

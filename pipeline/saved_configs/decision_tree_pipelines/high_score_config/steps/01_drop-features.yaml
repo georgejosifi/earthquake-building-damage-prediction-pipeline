@@ -1,0 +1,14 @@
+col_transform_parameters:
+  remainder: passthrough
+
+transformers:
+  - name: drop_irrelevant_features
+    features:
+      - building_id
+      - has_secondary_use
+      - plan_configuration
+      - legal_ownership_status
+      - position
+      - .*_type
+    transformer_name: Util
+    transformer_algorithm: ZeroTransformer
