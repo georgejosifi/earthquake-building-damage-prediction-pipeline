@@ -10,6 +10,4 @@ transformers:
       - .*_type
       - position
     transformer_name: Preprocessing
-    transformer_algorithm: OneHotEncoder
-    algorithm_parameters:
-      sparse_output: False
+    transformer_algorithm: OrdinalEncoder

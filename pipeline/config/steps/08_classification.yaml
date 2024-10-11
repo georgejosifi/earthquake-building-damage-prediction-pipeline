@@ -1,9 +1,0 @@
-classification_algorithm: KNeighborsClassifier
-algorithm_parameters:
-    n_neighbors: 5
-    
-    
-    
-    
- 
-  

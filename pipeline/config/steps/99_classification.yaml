@@ -1,0 +1,7 @@
+classification_algorithm: RandomForestClassifier
+algorithm_parameters:
+  n_estimators: 300
+  min_samples_split: 3
+  max_features: 0.9999
+  verbose: 1
+  n_jobs: 12
