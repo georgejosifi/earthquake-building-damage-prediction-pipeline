@@ -17,19 +17,7 @@ from imblearn.over_sampling import RandomOverSampler, SMOTENC, SMOTE, ADASYN, Bo
 import numpy as np
 np.random.seed(31)
 
-def validate(pipeline, data: LoadedData, pipeline_config: PipelineConfig):              #shto nje bool imbalanced learn
-    # train_values, validation_values, train_labels, validation_labels = train_test_split(
-    #     data.train_values, data.train_labels)
-    # pipeline.fit(X=train_values, y=train_labels["damage_grade"])
-    # predictions = pipeline.predict(validation_values)
-    # validation_labels = validation_labels["damage_grade"]
-    # acc = accuracy_score(validation_labels, predictions)
-    # mcc = matthews_corrcoef(validation_labels, predictions)
-    # print(f"Accuracy score: {acc}")
-    # print(f"Matthews score: {mcc}")
-    
-    
-    
+def validate(pipeline, data: LoadedData, pipeline_config: PipelineConfig): 
     skf = StratifiedKFold(n_splits=5, shuffle=True)
     acc_scores = []
     mcc_scores = []
@@ -53,18 +41,6 @@ def validate(pipeline, data: LoadedData, pipeline_config: PipelineConfig):      
             
         else:
             pipeline.fit(X_train, y_train)
-        
-        # for _, transform in pipeline.steps[:-1]:
-        #     transform.fit(X_train)
-        #     X_train = transform.transform(X_train)
-
-        # # print(X_train.columns)
-        # # smote = SVMSMOTE(random_state=31, n_jobs=12, )
-        # # X_train, y_train = smote.fit_resample(X_train, y_train)
-        
-        # # print(pipeline.steps[-1])
-                    
-        # pipeline.steps[-1][1].fit(X_train, y_train)
         
         
         
