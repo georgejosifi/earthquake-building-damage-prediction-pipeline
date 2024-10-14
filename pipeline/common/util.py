@@ -15,7 +15,8 @@ from common.classifiers import get_classification_algorithm
 from custom_transformers.util_transformers import ColumnRenameTransformer
 
 def get_imbalanced_learning_algorithm(pipeline_config: PipelineConfig):
-    imb_learn_path = Path(pipeline_config.imbalanced_learn_dir)
+    base_dir = Path(__file__).parent.parent
+    imb_learn_path = base_dir / pipeline_config.imbalanced_learn_dir
     with imb_learn_path.open('r') as f:
         imbalance_algo_config : ImbalanceAlgorithmConfig = dacite.from_dict(data_class= ImbalanceAlgorithmConfig, 
         data = yaml.load(f,yaml.FullLoader))
